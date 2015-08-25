@@ -62,12 +62,10 @@ function create() {
 function update() {
 
 	game.physics.arcade.collide(player, platforms);
-	game.physics.arcade.collide(baddie, platforms);
 	game.physics.arcade.collide(stars, platforms);
 	game.physics.arcade.overlap(player, stars, collectStar, null, this);
 
 	player.body.velocity.x = 0;
-	baddie.body.velocity.x = 150;
 
 	if (cursors.left.isDown){
 		
